@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>exercicio1</title>
+    </head>
+    <body>
+        <h1>Exercício 1</h1>
+        <h3>Digite seu nome e sobrenome nos campos abaixo:</h3>
+        <input type="text" id="nome">
+        <input type="text" id="sobrenome">
+        <button onclick="mostrarNomeCompleto()">Mostrar nome completo</button>
+        <script>
+            function mostrarNomeCompleto() {
+                var nome = document.getElementById("nome").value;
+                var sobrenome = document.getElementById("sobrenome").value;
+                if (nome== "" || sobrenome== "") {
+                    alert("Voce deixou algum campo em branco");
+                    return;
+                }
+                var nomeCompleto= nome +" "+ sobrenome;
+                alert(nomeCompleto);
+                
+            }
+        </script>
+
+    </body>
+</html>
