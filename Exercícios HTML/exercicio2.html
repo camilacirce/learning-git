@@ -10,11 +10,12 @@
         <input type="number" id="segundonumero">
         <input type="text" id="operacao">
         <button onclick="escolhadaoperacao()">Mostrar Resultado</button>
+        <input type="text" id="resultado">
         <script>
             function escolhadaoperacao() {
                 var operacao = document.getElementById("operacao").value;
                var primeironumero = document.getElementById("primeironumero").value;
-               var segundonumero = document.getElementById("primeironumero").value;
+               var segundonumero = document.getElementById("segundonumero").value;
                if (primeironumero == "" || segundonumero == "") {
                     alert("Voce deixou algum campo em branco");
                     return;
@@ -39,7 +40,7 @@
                if (operacao == "/") {
                     resultado = primeironumero / segundonumero;
                }
-               alert(resultado);
+               document.getElementById("resultado").value = resultado.toString();
 
 
 
