@@ -19,6 +19,11 @@
                     alert("Voce deixou algum campo em branco");
                     return;
                }
+               if (operacao != "+" && operacao != "-" && operacao != "/" && operacao != "*" ){
+                   alert("Operação Inválida");
+                   return;
+               }
+              
                primeironumero=Number(primeironumero);
                segundonumero=Number(segundonumero);
                var resultado = 0;
