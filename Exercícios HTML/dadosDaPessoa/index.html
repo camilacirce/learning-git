@@ -23,6 +23,14 @@
         <button onclick="mostrarDados()">Mostrar Dados</button>
         <script>
             function mostrarDados() {
+                var dia = document.getElementById("dia").value;
+                var mes = document.getElementById("mes").value;
+                var ano = document.getElementById("ano").value;
+                var dados = obterDados(dia,mes,ano);
+                document.getElementById("idade").innerText= dados.idade;
+                document.getElementById("nomeDoMes").innerText= dados.nomeDoMes;
+
+
             }
         </script>
 

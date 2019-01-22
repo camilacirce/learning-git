@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>exercicio 2</title>
+    </head>
+    <body>
+        <h1>Exercício 3</h1>
+        <h3>Digite o CEP:</h3>
+        <input type="cep" id="cep">
+        <button onclick="mostrarendereco()">Mostrar Endereço</button>
+        <div>Rua: <span id="logradouro"></span></div><br/>
+        <div>Bairro: <span id="bairro"></div><br/>
+        <div>Cidade: <span id="cidade"></span></div><br/>
+        <div>Estado: <span id="estado"></span></div><br/></span></div><br/><br/>
+        <script>
+            function mostrarendereco(){
+                var cep = document.getElementById("cep").value;
+                var url = "http://api.postmon.com.br/v1/cep/".concat(cep);
+                axios(url).then(function (resultado){
+                    var endereco = resultado.data;
+                    document.getElementById("logradouro").innerText= endereco.logradouro;
+                    document.getElementById("bairro").innerText= endereco.bairro;
+                    document.getElementById("cidade").innerText= endereco.cidade;
+                    document.getElementById("estado").innerText= endereco.estado;
+                
+                })
+
+
+                
+
+
+            }
+            
+        
+        </script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+        <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js"></script> 
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+         
+        
+
+    </body>
+</html>
