@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>exercicio - Dados de uma pessoa</title>
+        <script src="dados.js"></script>
+    </head>
+    <body>
+        <h1>Exercício</h1>
+        <p>Existe uma função obterDados que recebe como parametro o dia, mes e ano (numeros) e retorna o nome do mes de nascimento e a idade.</p>
+        <p>Exemplo:</p>
+        <blockquote>
+          var dados = obterDados(5, 10, 1991);<br/>
+          alert('Idade: ' + dados.idade);<br/>
+          alert('Mes de Nascimento: ' + dados.nomeDoMes);<br/>
+        </blockquote>
+        <p>Termine a codificação de uma função que ao clicar no botão Mostrar Dados, exiba nos "spans" as informaçoes</p>
+        <h3>Digite a sua data de nascimento: </h3>
+        Dia: <input type="text" id="dia">
+        Mes: <input type="text" id="mes">
+        Ano: <input type="text" id="ano"><br/><br/>
+        <div>Idade é: <span id="idade"></span></div><br/>
+        <div>Nome do Mês é: <span id="nomeDoMes"></span></div><br/><br/>
+        <button onclick="mostrarDados()">Mostrar Dados</button>
+        <script>
+            function mostrarDados() {
+            }
+        </script>
+
+    </body>
+</html>
